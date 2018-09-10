@@ -60,20 +60,17 @@ components:
             - tag: div
               props:
                 className: .classes.right
-              - tag: Route
-                props:
-                  path: '/reactml/help'
-                  component: ...Help
-                  exact: true
-              - tag: Route
-                props:
-                  path: '/reactml/about'
-                  component: ...About
-                  exact: true
-        #     spec: .spec
-        #     actionLib: .actionLib
-        #     tagFactory: .tagFactory
-        #     stateNodeName: .stateNodeName
+              children:
+                - tag: Route
+                  props:
+                    path: '/reactml/help'
+                    component: ...Help
+                    exact: true
+                - tag: Route
+                  props:
+                    path: '/reactml/about'
+                    component: ...About
+                    exact: true
         - tag: Footer
   Header:
     styles:
@@ -104,7 +101,6 @@ components:
             - tag: Link
               props:
                 to: /reactml/about
-                # onClick: ..gotoAbout
               content: 'about'
   Footer:
     view:
@@ -200,7 +196,7 @@ components:
                     props:
                       className: textField
                       label: Name
-                      value: .firstName # i.e. props.customerName
+                      value: .firstName
                       onChange: ..onFirstNameChange
                       helperText: What's your name?
                       margin: normal
@@ -233,7 +229,6 @@ components:
                   - tag: button
                     props:
                       color: secondary
-                    #   onClick: myAction
                     span:
                       content: cancel
                   - tag: Status
