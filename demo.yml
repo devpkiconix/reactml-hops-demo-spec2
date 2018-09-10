@@ -87,14 +87,12 @@ components:
             - tag: Link
               props:
                 to: /reactml/view
-                # onClick: ..gotoRoot
               content: 'home'
             - tag: span
               content: ' | '
             - tag: Link
               props:
                 to: /reactml/editor
-                # onClick: ..gotoEditor
               content: 'editor'
             - tag: span
               content: ' | '
