@@ -34,6 +34,9 @@ components:
     styles:
       app:
         fontFamily: monospace
+      body:
+        padding: 20px
+        backgroundColor: lightGray
     view:
       tag: main
       props:
@@ -41,6 +44,8 @@ components:
       children:
         - tag: Header
         - tag: div
+          props:
+            className: .classes.body
           children:
             - tag: Route
               props:
@@ -57,25 +62,25 @@ components:
                 path: '/reactml/editor'
                 component: ...Editor
                 exact: true
-            - tag: div
+            - tag: Route
               props:
-                className: .classes.right
-              children:
-                - tag: Route
-                  props:
-                    path: '/reactml/help'
-                    component: ...Help
-                    exact: true
-                - tag: Route
-                  props:
-                    path: '/reactml/about'
-                    component: ...About
-                    exact: true
+                path: '/reactml/help'
+                component: ...Help
+                exact: true
+            - tag: Route
+              props:
+                path: '/reactml/about'
+                component: ...About
+                exact: true
         - tag: Footer
   Header:
     styles:
       root:
         backgroundColor: lightBlue
+        padding: 20px 10px
+
+      right:
+        float: right
     state-to-props: {}
     view:
       tag: div
@@ -87,19 +92,27 @@ components:
             - tag: Link
               props:
                 to: /reactml/view
-              content: 'home'
+              content: 'Home'
             - tag: span
               content: ' | '
             - tag: Link
               props:
                 to: /reactml/editor
-              content: 'editor'
-            - tag: span
-              content: ' | '
-            - tag: Link
+              content: 'Editor'
+            - tag: div
               props:
-                to: /reactml/about
-              content: 'about'
+                className: .classes.right
+              children:
+                - tag: Link
+                  props:
+                    to: /reactml/about
+                  content: 'About'
+                - tag: span
+                  content: ' | '
+                - tag: Link
+                  props:
+                    to: /reactml/help
+                  content: 'Help'
   Footer:
     view:
       tag: Paper
@@ -131,7 +144,7 @@ components:
     view:
       tag: div
       content: "Help text here"
-    ReadOnly:
+  ReadOnly:
     state-to-props:
       email: user.email
       firstName: user.firstName
