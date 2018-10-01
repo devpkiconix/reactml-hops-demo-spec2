@@ -2,10 +2,10 @@
   "state": {
     "initial": {
       "user": {
-        "name": "Test Name",
-        "email": "testuser1@example.com",
-        "firstName": "User1",
-        "lastName": "Test",
+        "name": "Doe",
+        "email": "johndoe@example.com",
+        "firstName": "John",
+        "lastName": "Doe",
         "address": {
           "street": "1234 main street",
           "city": "la la land",
@@ -116,7 +116,7 @@
     "Header": {
       "styles": {
         "root": {
-          "backgroundColor": "lightPink",
+          "backgroundColor": "lightBlue",
           "padding": "20px 10px"
         },
         "right": {
@@ -184,16 +184,17 @@
     },
     "Footer": {
       "view": {
-        "tag": "div",
+        "tag": "Paper",
         "children": [
           {
             "tag": "pre",
             "props": {
               "style": {
+                "color": "maroon",
                 "paddingTop": "20px"
               }
             },
-            "content": "This prototype is rendered from a remote JSON config file. "
+            "content": "This prototype is rendered from a JSON config file. "
           }
         ]
       }
