@@ -122,8 +122,7 @@ components:
             style:
               color: maroon
               paddingTop: 20px
-          content: "This prototype is rendered from a YML config file. Please see
-          *.yml files in src/containers/Playground folder"
+          content: "This prototype is rendered from a remote YML config file."
   TodoList:
     state-to-props:
       items: todoList
