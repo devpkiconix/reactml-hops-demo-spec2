@@ -43,7 +43,7 @@
     "App": {
       "styles": {
         "app": {
-          "fontFamily": "monospace"
+          
         },
         "body": {
           "padding": "20px",
