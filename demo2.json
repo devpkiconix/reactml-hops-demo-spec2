@@ -2,10 +2,10 @@
   "state": {
     "initial": {
       "user": {
-        "name": "Doe",
+        "name": "Depp",
         "email": "johndoe@example.com",
-        "firstName": "John",
-        "lastName": "Doe",
+        "firstName": "Johnny",
+        "lastName": "Depp",
         "address": {
           "street": "1234 main street",
           "city": "la la land",
@@ -47,7 +47,6 @@
         },
         "body": {
           "padding": "20px",
-          "backgroundColor": "lightGray"
         }
       },
       "view": {
